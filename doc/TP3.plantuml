@@ -1,0 +1,102 @@
+@startuml
+class PizzaFactoryBrest [[java:tp3.PizzaFactoryBrest]] {
+	-{static}PizzaFactoryBrest uniqueInstance
+	-PizzaFactoryBrest()
+	+{static}PizzaFactoryBrest getInstance()
+	+Pizza create(String name)
+}
+class PizzaFactory [[java:tp3.PizzaFactory]] {
+}
+PizzaFactory <|-- PizzaFactoryBrest
+abstract class Pizza [[java:tp3.Pizza]] {
+	#String name
+	#String crust
+	#String sauce
+	#ArrayList<String> garnitures
+	+Pizza(String style, String type)
+	+void prepare()
+	+void bake()
+	+void cut()
+	+void wrap()
+	+String getName()
+}
+class PizzeriaFactory [[java:tp3.PizzeriaFactory]] {
+	-{static}PizzeriaFactory uniqueInstance
+	-PizzeriaFactory()
+	+Pizzeria create(String type)
+	+{static}PizzeriaFactory getInstance()
+}
+abstract class PizzaFactory [[java:tp3.PizzaFactory]] {
+	+{abstract}Pizza create(String name)
+}
+abstract class Pizzeria [[java:tp3.Pizzeria]] {
+	+Pizzeria(PizzaFactory pizzaFactory)
+	+Pizza orderPizza(String type)
+	#Pizza createPizza(String type)
+}
+class PizzaFactory [[java:tp3.PizzaFactory]] {
+}
+Pizzeria --> "1" PizzaFactory : pizzaFactory
+class PizzaFactoryStrasbourg [[java:tp3.PizzaFactoryStrasbourg]] {
+	-{static}PizzaFactoryStrasbourg uniqueInstance
+	-PizzaFactoryStrasbourg()
+	+{static}PizzaFactoryStrasbourg getInstance()
+	+Pizza create(String name)
+}
+class PizzaFactory [[java:tp3.PizzaFactory]] {
+}
+PizzaFactory <|-- PizzaFactoryStrasbourg
+class PizzeriaBrest [[java:tp3.PizzeriaBrest]] {
+	+PizzeriaBrest(PizzaFactory PizzaFactory)
+}
+class Pizzeria [[java:tp3.Pizzeria]] {
+}
+Pizzeria <|-- PizzeriaBrest
+class PizzeriaStrasbourg [[java:tp3.PizzeriaStrasbourg]] {
+	+PizzeriaStrasbourg(PizzaFactory PizzaFactory)
+}
+class Pizzeria [[java:tp3.Pizzeria]] {
+}
+Pizzeria <|-- PizzeriaStrasbourg
+class Main [[java:tp3.Main]] {
+	+{static}void main(String[] args)
+	+void cookPizzas()
+}
+class PizzaCheeseStyleBrest [[java:tp3.pizzas.PizzaCheeseStyleBrest]] {
+	+PizzaCheeseStyleBrest()
+}
+class Pizza [[java:tp3.Pizza]] {
+}
+Pizza <|-- PizzaCheeseStyleBrest
+class PizzaCheeseStyleStrasbourg [[java:tp3.pizzas.PizzaCheeseStyleStrasbourg]] {
+	+PizzaCheeseStyleStrasbourg()
+	+void cut()
+}
+class Pizza [[java:tp3.Pizza]] {
+}
+Pizza <|-- PizzaCheeseStyleStrasbourg
+class PizzaPoivronStyleStrasbourg [[java:tp3.pizzas.PizzaPoivronStyleStrasbourg]] {
+	+PizzaPoivronStyleStrasbourg()
+}
+class Pizza [[java:tp3.Pizza]] {
+}
+Pizza <|-- PizzaPoivronStyleStrasbourg
+class PizzaGrecqueStyleStrasbourg [[java:tp3.pizzas.PizzaGrecqueStyleStrasbourg]] {
+	+PizzaGrecqueStyleStrasbourg()
+}
+class Pizza [[java:tp3.Pizza]] {
+}
+Pizza <|-- PizzaGrecqueStyleStrasbourg
+class PizzaGrecqueStyleBrest [[java:tp3.pizzas.PizzaGrecqueStyleBrest]] {
+	+PizzaGrecqueStyleBrest()
+}
+class Pizza [[java:tp3.Pizza]] {
+}
+Pizza <|-- PizzaGrecqueStyleBrest
+class PizzaPoivronStyleBrest [[java:tp3.pizzas.PizzaPoivronStyleBrest]] {
+	+PizzaPoivronStyleBrest()
+}
+class Pizza [[java:tp3.Pizza]] {
+}
+Pizza <|-- PizzaPoivronStyleBrest
+@enduml

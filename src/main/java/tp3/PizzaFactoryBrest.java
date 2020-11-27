@@ -4,8 +4,6 @@ import tp3.pizzas.PizzaCheeseStyleBrest;
 import tp3.pizzas.PizzaGrecqueStyleBrest;
 import tp3.pizzas.PizzaPoivronStyleBrest;
 
-import java.util.ArrayList;
-
 public class PizzaFactoryBrest extends PizzaFactory {
 
     private static PizzaFactoryBrest uniqueInstance;

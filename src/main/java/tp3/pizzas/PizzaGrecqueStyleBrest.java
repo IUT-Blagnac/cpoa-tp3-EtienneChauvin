@@ -2,8 +2,6 @@ package tp3.pizzas;
 
 import tp3.Pizza;
 
-import java.util.ArrayList;
-
 public class PizzaGrecqueStyleBrest extends Pizza {
     public PizzaGrecqueStyleBrest() {
         super("Brest", "grecque");

@@ -1,6 +1,7 @@
 .settings
 .vscode
 .classpath
+.metadata
 .project
 target
 .gradle

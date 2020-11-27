@@ -4,7 +4,7 @@ import tp3.pizzas.PizzaCheeseStyleStrasbourg;
 import tp3.pizzas.PizzaGrecqueStyleStrasbourg;
 import tp3.pizzas.PizzaPoivronStyleStrasbourg;
 
-public class PizzaFactoryStrasbourg extends tp3.PizzaFactory {
+public class PizzaFactoryStrasbourg extends PizzaFactory {
 
     private static PizzaFactoryStrasbourg uniqueInstance;
 

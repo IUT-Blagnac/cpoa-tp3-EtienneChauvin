@@ -1,7 +1,3 @@
-package tp3.pizzas;
-
-import tp3.Pizza;
-
 public class PizzaCheeseStyleStrasbourg extends Pizza {
     public PizzaCheeseStyleStrasbourg() {
         super("Strasbourg", "cheese");

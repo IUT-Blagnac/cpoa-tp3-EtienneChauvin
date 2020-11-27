@@ -1,5 +1,3 @@
-package tp3;
-
 public class PizzeriaFactory {
 
     private static PizzeriaFactory uniqueInstance;

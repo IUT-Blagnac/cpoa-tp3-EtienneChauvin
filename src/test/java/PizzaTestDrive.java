@@ -1,5 +1,4 @@
 import org.junit.Test;
-import tp3.Main;
 
 public class PizzaTestDrive {
 

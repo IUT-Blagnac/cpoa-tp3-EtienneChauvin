@@ -1,8 +1,6 @@
-package tp3;
-
 /**
  * @author bruel (from O'Reilly Head-First series)
- * @depend - * - tp3.Pizza
+ * @depend - * - Pizza
  */
 public abstract class Pizzeria {
 
@@ -14,7 +12,7 @@ public abstract class Pizzeria {
 
     /**
      * @param type type of the pizza
-     * @return a tp3.Pizza object according to the type
+     * @return a Pizza object according to the type
      */
     public Pizza orderPizza(String type) {
         Pizza pizza = createPizza(type);

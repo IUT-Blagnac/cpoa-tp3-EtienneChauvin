@@ -1,9 +1,3 @@
-package tp3;
-
-import tp3.pizzas.PizzaCheeseStyleBrest;
-import tp3.pizzas.PizzaGrecqueStyleBrest;
-import tp3.pizzas.PizzaPoivronStyleBrest;
-
 public class PizzaFactoryBrest extends PizzaFactory {
 
     private static PizzaFactoryBrest uniqueInstance;

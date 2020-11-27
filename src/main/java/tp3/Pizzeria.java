@@ -26,8 +26,6 @@ public abstract class Pizzeria {
     }
 
     protected Pizza createPizza(String type) {
-        Pizza pizza = pizzaFactory.create(type);
-        pizza.name += " with " + type;
-        return pizza;
+        return pizzaFactory.create(type);
     }
 }

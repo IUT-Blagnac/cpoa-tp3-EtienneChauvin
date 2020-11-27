@@ -1,10 +1,5 @@
 package tp3;
 
-import tp3.pizzerias.PizzaFactoryBrest;
-import tp3.pizzerias.PizzaFactoryStrasbourg;
-import tp3.pizzerias.PizzeriaBrest;
-import tp3.pizzerias.PizzeriaStrasbourg;
-
 public class PizzeriaFactory {
 
     private static PizzeriaFactory uniqueInstance;

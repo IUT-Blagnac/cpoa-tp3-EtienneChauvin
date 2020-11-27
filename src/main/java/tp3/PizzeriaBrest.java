@@ -1,4 +1,4 @@
-package tp3.pizzerias;
+package tp3;
 
 import tp3.PizzaFactory;
 import tp3.Pizzeria;

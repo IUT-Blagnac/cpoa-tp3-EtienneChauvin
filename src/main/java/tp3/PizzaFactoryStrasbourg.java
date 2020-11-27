@@ -1,12 +1,13 @@
-package tp3.pizzerias;
+package tp3;
 
-import tp3.Pizza;
-import tp3.PizzaFactory;
 import tp3.pizzas.PizzaCheeseStyleStrasbourg;
 import tp3.pizzas.PizzaGrecqueStyleStrasbourg;
 import tp3.pizzas.PizzaPoivronStyleStrasbourg;
 
-public class PizzaFactoryStrasbourg extends PizzaFactory {
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class PizzaFactoryStrasbourg extends tp3.PizzaFactory {
 
     private static PizzaFactoryStrasbourg uniqueInstance;
 
@@ -36,8 +37,6 @@ public class PizzaFactoryStrasbourg extends PizzaFactory {
             default:
                 throw new IllegalArgumentException("Sorry, this type of pizza doesn't exist: " + name);
         }
-        pizza.name += "Style Strasbourg";
-        pizza.garnitures.add("Mozzarella");
         return pizza;
     }
 }

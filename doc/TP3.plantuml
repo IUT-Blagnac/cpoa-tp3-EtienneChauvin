@@ -1,6 +1,5 @@
 @startuml
-'''Diagramme de classe généré sur Eclipse grâce au plugin PlantUml.
-
+''' Diagramme généré à partir des sources sur Eclipse grâce au plugin plantUml
 class PizzaFactoryBrest [[java:PizzaFactoryBrest]] {
 	-{static}PizzaFactoryBrest uniqueInstance
 	-PizzaFactoryBrest()
@@ -101,4 +100,10 @@ class PizzaPoivronStyleBrest [[java:PizzaPoivronStyleBrest]] {
 class Pizza [[java:Pizza]] {
 }
 Pizza <|-- PizzaPoivronStyleBrest
+
+''' Relations de dépendance ajoutées à la main car non générées avec le plugin plantUml sur Eclipse
+Main ..> Pizza
+Main ..> PizzeriaFactory
+PizzeriaFactory ..> Pizzeria
+PizzaFactory ..> Pizza
 @enduml

@@ -1,7 +1,5 @@
 import org.junit.Test;
-import tp3.Pizza;
-import tp3.Pizzeria;
-import tp3.PizzeriaFactory;
+import tp3.Main;
 
 public class PizzaTestDrive {
 
@@ -11,13 +9,6 @@ public class PizzaTestDrive {
 
     @Test
     public void shallCookPizzas() {
-        Pizzeria boutiqueBrest = PizzeriaFactory.getInstance().create("Brest");
-        Pizzeria boutiqueStrasbourg = PizzeriaFactory.getInstance().create("Strasbourg");
-
-        Pizza pizza = boutiqueBrest.orderPizza("cheese");
-        System.out.println("JMB has ordered a " + pizza.getName() + "\n");
-
-        pizza = boutiqueStrasbourg.orderPizza("cheese");
-        System.out.println("JMI has ordered a " + pizza.getName() + "\n");
+        new Main().cookPizzas();
     }
 }

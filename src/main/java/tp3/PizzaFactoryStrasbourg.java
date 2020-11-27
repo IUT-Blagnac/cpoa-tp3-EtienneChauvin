@@ -4,9 +4,6 @@ import tp3.pizzas.PizzaCheeseStyleStrasbourg;
 import tp3.pizzas.PizzaGrecqueStyleStrasbourg;
 import tp3.pizzas.PizzaPoivronStyleStrasbourg;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-
 public class PizzaFactoryStrasbourg extends tp3.PizzaFactory {
 
     private static PizzaFactoryStrasbourg uniqueInstance;
